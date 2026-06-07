@@ -1,0 +1,8 @@
+
+  keycloak_url: https://vm-7345c007.na4u.ru/realms/master/protocol/openid-connect/token
+  client_id: synapse
+  client_secret: gJUkUA0PSYn4LdJM11N5i49O2HDs12RF
+  username: "admin"
+  password: "password"
+  matrix_url: "https://vm-196f9ca4.na4u.ru/_matrix/client/v3/account/whoami"
+  macaroon_secret_key: "y-G:d6.rm=W9OW.6h9Kz=b~4GDd~iIQ-lSiI&^CI6ChHhC+y,@" # ПАРАМТР В ДАННОМ КОНТЕКСТЕ НЕ ОБЯЗАТЕЛЬНЫЙ

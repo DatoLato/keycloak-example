@@ -1,0 +1,23 @@
+{
+  "realm": "master",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "synapse",
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "synapse-secret",
+      "redirectUris": [
+        "http://synapse:8008/_synapse/client/oidc/callback",
+        "http://localhost:8008/_synapse/client/oidc/callback"
+      ],
+      "defaultClientScopes": [
+        "email",
+        "profile",
+        "offline_access"
+      ],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true
+    }
+  ]
+}
