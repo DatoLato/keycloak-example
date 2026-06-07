@@ -11,7 +11,7 @@
 
 * cd keycloak-dockerized-ssl-nginx
 
-* ткройте файл .env и отредактируйте следующие переменные:
+* откройте файл .env и отредактируйте следующие переменные:
 
 ```
 KEYCLOAK_ADMIN=admin
@@ -28,7 +28,7 @@ POSTGRES_USER=keycloak
 POSTGRES_PASSWORD=password
 ```
 
-* Данный пункт может выполняться и до первого шага - он никак не зависит от него. Далее в инструкции полагаем что у вас будет зарегистрирован свой домен (напримерsurkoff.com) и мы хотим чтобы Keycloak был бы доступен по my-keycloak.surkoff.com
+* Данный пункт может выполняться и до первого шага - он никак не зависит от него. Далее в инструкции полагаем что у вас будет зарегистрирован свой домен (например test.com) и мы хотим чтобы Keycloak был бы доступен по my-keycloak.test.com
 
 
 * В конфигах nginx - default.conf_with_ssl, default.conf_without_ssl указываем свой домен:
@@ -75,6 +75,4 @@ server {
 
 * cp nginx/conf.d/default.conf_without_ssl nginx/conf.d/default.conf docker-compose up -d
 * docker exec certbot certbot certonly --webroot --webroot-path=/data/letsencrypt -d my-keycloak.surkoff.com --email your_email@gmail.com --agree-tos --no-eff-email
-
-
 * docker-compose down / cp nginx/conf.d/default.conf_with_ssl nginx/conf.d/default.conf / docker-compose up -d
